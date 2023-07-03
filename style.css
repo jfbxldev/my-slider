@@ -1,0 +1,14 @@
+.slide-board {
+  overflow-x: hidden;
+}
+.slide-range {
+  width: 300%;
+  transform: translateX(-33.33%);
+  height: 350px;
+  display: flex;
+}
+
+.slide-item {
+  width: 33.33%;
+  height:100%;
+}

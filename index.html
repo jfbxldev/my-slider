@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+   <template id="my-slider">
+      <style>
+        .slide-panel {
+          display: flex;
+          justify-content: space-around;
+          padding: 2rem;
+        }
+        .slide-board {
+  overflow-x: hidden;
+}
+.slide-range {
+  width: 300%;
+  transform: translateX(-33.33%);
+  height: 350px;
+  display: flex;
+}
+.slide-panel > button {
+  padding: 1rem;
+}
+.orange {
+background-color: #fb923c;
+}
+.cyan {
+ background-color:  #22d3ee;
+}
+.lime {
+  background-color: #a3e635;
+}
+.slide-item {
+  width: 33.33%;
+  height:100%;
+}
+      </style>
+       <div class="slide-panel">
+        <button type="button" class="shadow p-4">Précédent</button>
+        <button type="button" class="shadow p-4">suivant</button>
+      </div>
+      <div class="slide-board">
+        <div class="slide-range">
+          <div class="slide-item orange"></div>
+          <div class="slide-item cyan"></div>
+          <div class="slide-item lime"></div>
+        </div>
+      </div>
+    </div>
+   </template>
+  
+    <div class="max-w-xl mx-auto bg-slate-50 shadow p-4">
+      <div class="py-8 flex justify-around bg-white">
+        <button type="button" class="shadow p-4" onclick="onPrevious()">Précédent</button>
+        <button type="button" class="shadow p-4" onclick="onNext()">suivant</button>
+      </div>
+      <div class="slide-board">
+        <div class="slide-range bg-red-200">
+          <div class="slide-item bg-orange-400"></div>
+          <div class="slide-item bg-cyan-400"></div>
+          <div class="slide-item bg-lime-400"></div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-xl mx-auto bg-slate-50 shadow p-4">
+      
+     <my-slider></my-slider>
+    </div>
+</body>
+</html>
